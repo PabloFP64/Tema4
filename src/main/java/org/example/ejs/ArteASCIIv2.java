@@ -72,14 +72,52 @@ public class ArteASCIIv2 {
     }
 
     public void cruz(int t, String c){
+        for (int x = 0; x < t; x++) {
+            for (int y = 0; y < t; y++) {
+                if (x == y || x + y == t - 1) {
+                    System.out.print(c);
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println("");
+        }
 
     }
 
     public void rombo(int t, String c){
+        for (int x = 0; x < t; x++) {
+            for (int y = 0; y < t; y++) {
+                if (x + y == t - 1 || x == y) {
+                    System.out.print(c);
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println("");
+        }
 
     }
 
     public void ajedrezado(int t, String c){
+        for (int x = 0; x < t; x++) {
+            for (int y = 0; y < t; y++) {
+                if (x % 2 == 0) {
+                    if (y % 2 == 0) {
+                        System.out.print(c);
+                    } else {
+                        System.out.print(" ");
+                    }
+                } else {
+                    if (y % 2 == 0) {
+                        System.out.print(" ");
+                    } else {
+                        System.out.print(c);
+                    }
+                }
+            }
+            System.out.println("");
+        }
 
     }
 
